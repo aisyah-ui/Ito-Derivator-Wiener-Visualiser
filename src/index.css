@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* KaTeX theme adaptation and rigorous typography alignment */
+.dark .katex {
+  color: #f1f5f9;
+}
+
+.katex {
+  color: #0f172a;
+  line-height: normal;
+  text-rendering: auto;
+}
+
+/* Ensure display mode formulas are strictly centered, non-overlapping, with clean margins */
+.katex-display {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0.75rem auto !important;
+  padding: 0.35rem 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.katex-display > .katex {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  max-width: 100%;
+}
+
+/* Fraction bar alignment and vertical clearances */
+.katex .mfrac {
+  vertical-align: -0.05em;
+}
+
+.katex .mfrac .frac-line {
+  border-bottom-width: 0.06em !important;
+  border-bottom-style: solid !important;
+}
+
+/* Strictly ensure superscripts and exponents are elevated and uniformly sized */
+.katex .msupsub {
+  text-align: left;
+}
+
+.katex .msupsub .vlist-t {
+  border-collapse: collapse !important;
+}
+
+/* In all superscripts, ensure r and (T - t) share exact same baseline and font size */
+.katex .msupsub .mord,
+.katex .msupsub .mopen,
+.katex .msupsub .mclose,
+.katex .msupsub .mbin,
+.katex .msupsub .mrel,
+.katex .msupsub .mpunct {
+  vertical-align: baseline !important;
+  font-size: inherit !important;
+  line-height: 1 !important;
+}
+

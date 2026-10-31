@@ -1,0 +1,6 @@
+{
+  "name": "Random Walk Studio: Wiener Processes & Itô's Lemma",
+  "description": "Interactive educational laboratory for Financial Derivatives (Chapter 14): Step-by-Step Itô Derivator and Wiener Shock Visualiser with gamified proof builder and self-check quizzes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
